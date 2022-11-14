@@ -1,0 +1,113 @@
+* {
+  font-family: consolas;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 4%;
+  background-color: #333;
+}
+
+.container {
+  position: relative;
+  min-height: 25rem;
+  background-color: #333;
+  border-radius: 1.25rem;
+  padding: 2.5rem 1.875rem 1.875rem;
+  box-shadow: 1.6rem 1.6rem 4.7rem rgba(0, 0, 0, 0.25),
+    0.66rem 0.66rem 4.4rem rgba(0, 0, 0, 0.25),
+    inset -0.3rem -0.3rem 1rem rgba(0, 0, 0, 0.5),
+    inset 0.3rem 0.3rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+.calculator {
+  position: relative;
+  display: grid;
+
+  .value {
+    position: relative;
+    grid-column: span 4;
+    height: 6.25rem;
+    left: 0.625rem;
+    width: calc(100% - 1.25rem);
+    border: none;
+    outline: none;
+    background-color: #a7af7c;
+    margin-bottom: 0.6rem;
+    border-radius: 0.6rem;
+    text-align: end;
+    padding: 0.6rem;
+    font-size: 2rem;
+  }
+
+  .num {
+    position: relative;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: clamp(3rem, 0.5rem + 12.5vw, 5rem);
+    width: clamp(3rem, 0.5rem + 12.5vw, 5rem);
+    margin: 0.5rem;
+    border-radius: 0.6rem;
+    background: linear-gradient(180deg, #2f2f2f, #3f3f3f);
+    box-shadow: inset -0.5rem 0 0.5rem rgba(0, 0, 0, 0.15),
+      inset 0 -0.5rem 0.5rem rgba(0, 0, 0, 0.25), 0 0 0 2px rgba(0, 0, 0, 0.75),
+      0.6rem 1.25rem 1.5rem rgba(0, 0, 0, 0.4);
+    color: #fff;
+    user-select: none;
+    cursor: pointer;
+    font-weight: 400;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0.6rem;
+      left: 0.6rem;
+      bottom: 0.875rem;
+      right: 0.75rem;
+      background: linear-gradient(90deg, #2d2d2d, #4d4d4d);
+      border-radius: 0.6rem;
+      box-shadow: -0.3rem -0.3rem 1rem rgba(0, 0, 0, 0.1),
+        0.6rem 0.3rem 0.6rem rgba(0, 0, 0, 0.15);
+      border: 1px solid #0002;
+    }
+
+    &:active {
+      filter: brightness(1.5);
+    }
+
+    i {
+      position: relative;
+      font-style: normal;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+    }
+  }
+
+  .clear {
+    grid-column: span 2;
+    width: 90%;
+    background: #f00;
+
+    &::before {
+      background: linear-gradient(90deg, #d20000, #ffffff5c);
+    }
+  }
+
+  .plus {
+    grid-row: span 2;
+    height: 90%;
+  }
+
+  .equal {
+    background: #2196f3;
+
+    &::before {
+      background: linear-gradient(90deg, #1479c9, #ffffff5c);
+      border: 1px solid #0002;
+    }
+  }
+}
