@@ -14,6 +14,7 @@ body {
 .container {
   position: relative;
   min-height: 25rem;
+  max-width: 36rem;
   background-color: #333;
   border-radius: 1.25rem;
   padding: 2.5rem 1.875rem 1.875rem;
@@ -28,19 +29,32 @@ body {
   display: grid;
 
   .output {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
     position: relative;
     grid-column: span 4;
-    height: 6.25rem;
-    left: 0.625rem;
-    width: calc(100% - 1.25rem);
+    min-height: 6.25rem;
     border: none;
     outline: none;
     background-color: #a7af7c;
     margin-bottom: 0.6rem;
     border-radius: 0.6rem;
-    text-align: end;
     padding: 0.6rem;
     font-size: 2rem;
+    word-wrap: break-word;
+    word-break: break-all;
+
+    .previous-operand {
+      font-size: 1.5rem;
+      color: rgba(0, 0, 0, 0.75);
+    }
+
+    .current-operand {
+      font-size: 2.5rem;
+      color: rgba(0, 0, 0);
+    }
   }
 
   .num {
