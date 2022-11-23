@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link
+      rel="shortcut icon"
+      href="images/calculator.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="calculator">
+        <div class="output">
+          <div class="previous-operand" data-previous-operand></div>
+          <div class="current-operand" data-current-operand></div>
+        </div>
+        <button class="num clear" data-all-clear>
+          <i>AC</i>
+        </button>
+        <button class="num" data-delete><i>DEL</i></button>
+        <button class="num" data-operation><i>/</i></button>
+        <button class="num" data-number><i>7</i></button>
+        <button class="num" data-number><i>8</i></button>
+        <button class="num" data-number><i>9</i></button>
+        <button class="num" data-operation><i>*</i></button>
+        <button class="num" data-number><i>4</i></button>
+        <button class="num" data-number><i>5</i></button>
+        <button class="num" data-number><i>6</i></button>
+        <button class="num" data-operation><i>-</i></button>
+
+        <button class="num" data-number><i>1</i></button>
+        <button class="num" data-number><i>2</i></button>
+        <button class="num" data-number><i>3</i></button
+        ><button class="num plus" data-operation>
+          <i>+</i>
+        </button>
+        <button class="num" data-number><i>0</i></button>
+        <button class="num" data-number><i>.</i></button>
+
+        <button class="num equal" data-equals>
+          <i>=</i>
+        </button>
+      </div>
+    </div>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
